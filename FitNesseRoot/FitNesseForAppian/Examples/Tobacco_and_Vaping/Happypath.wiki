@@ -1,0 +1,119 @@
+---
+Test
+---
+!***> FitNesse Configurations
+
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
+!path ${automated.testing.home}/**.jar
+*!
+----
+!3 '''Please follow the directions below to execute the test'''
+----
+ 1 If your TESTING_HOME is located somewhere other than ${automated.testing.home}, update ''automated.testing.home'' in TESTING_HOME/configs/custom.properties
+   * For more information look at [[Changing !-FitNesse-! for Appian installation directory][.FitNesseForAppian.Documentation.Administration.ChangeFitnesseForAppianInstallationDirectory]].
+ 2 Click "Edit" at the top of this page and update the following fields in the "Initialization and Login" block below
+   * Replace ''APPIAN_URL'' with Appian URL, beginning with https:// and including /suite at the end (e.g. https://forum.appian.com/suite)
+   * Replace ''APPIAN_VERSION'' with a supported version from (21.2 - 23.1)
+   * Replace ''APPIAN_LOCALE'' with (en_US or en_GB) to handle differences in how dates are displayed
+   * Replace ''APPIAN_USERNAME'' with a valid username for Appian URL above
+   * Open ${automated.testing.home}/configs/users.properties and add a line for the above username that is of the form username=password (e.g. test.user=password)
+ 3 Click "Test" at the top of this page
+----
+!*** Initialization and Login to Tempo
+
+!| script           |com.appiancorp.ps.automatedtest.fixture.TempoFixture|
+|set up login details                                                    |
+|login with username|testuser_01                                         |
+***!
+!*** Click on all the tabs
+
+!*** Initiate request
+#RP DETAILS
+!| script                                           |
+|populate field |RP Trade Name  |with|tradnametest  |
+|populate field |RP Legal Name  |with|legalnametest |
+|populate field |RP Type        |with|Retailer      |
+|populate field |RP Email       |with|rpmail@test   |
+|populate field |RP Phone Number|with|+91 9999999999|
+|click on button|NEXT           |                   |
+#Inspection details
+!| script                                                       |
+|populate field |Product Type       |with|Vaping Products       |
+|populate field |Product Regulations|with|TVPA-30.21, TVPA-30.22|
+|populate field |URL                |with|https://google.com    |
+|click on button|NEXT                                           |
+#Violation details
+!| script                                                                                                                |
+|click on grid  |[1]        |add row link                                                                                |
+|click on grid  |[1]        |add row link                                                                                |
+|populate       |FILE_UPLOAD|field |[1]|with|C:/Users/vijayarajanm/Documents/Poc_Flow Dig_Vijayarajan Muthurajan_2391.jpg|
+|populate grid  |[1]        |column|[2]|row |[1]                   |with                   |TVPA-30.21                   |
+|populate grid  |[1]        |column|[2]|row |[2]                   |with                   |TVPA-30.22                   |
+|populate grid  |[1]        |column|[3]|row |[1]                   |with                   |ok                           |
+|populate grid  |[1]        |column|[3]|row |[2]                   |with                   |ok                           |
+|populate grid  |[1]        |column|[4]|row |[1]                   |with                   |YES                          |
+|populate grid  |[1]        |column|[4]|row |[2]                   |with                   |NO                           |
+|click on button|NEXT                                                                                                    |
+#Inspection Review
+!| script                                     |
+|verify field   |Inspector Notes|is present   |
+|populate field |Inspector Notes|with value|ok|
+|click on button|Submit                       |
+|click on button|YES                          |
+|click on link  |Go to Project  Details       |
+
+***!
+!*** Log out 
+!| script|
+|logout  |
+***!
+
+!*** Initialization and Login to Tempo
+
+!| script                             |
+|set up login details                 |
+|login with username|testspecialist_01|
+***!
+
+!*** Specialist approval
+!| script                                                               |
+|click on menu |My Task                                                 |
+|click on grid |[1]                       |column|[1]    |row    |[1]   |
+|accept task                                                            |
+|populate field|Inspector Edits Required? |with  |NO                    |
+|populate field|Is Manager Review Required|with  |YES                   |
+|populate field|Comments                  |with  |Specialist review done|
+|SubmitRequest                                                          |
+
+!*** Log out and tear down
+!| script|
+|logout  |
+*****!
+
+!*** Initialization and Login to Tempo
+
+!| script                          |
+|set up login details              |
+|login with username|testmanager_01|
+***!
+
+!*** Manager approval
+!| script                                                            |
+|click on menu  |My Task                                             |
+|click on grid  |[1]                      |column|[1]   |row   |[1]  |
+|accept task                                                         |
+|populate field |Inspector Edits Required?|with  |NO                 |
+|populate field |Comments                 |with  |Manager review done|
+|click on button|APPROVE                                             |
+|click on button|YES                                                 |
+
+
+
+***!
+!*** Log out and tear down
+!| script |
+|logout   |
+|tear down|
+***!
+

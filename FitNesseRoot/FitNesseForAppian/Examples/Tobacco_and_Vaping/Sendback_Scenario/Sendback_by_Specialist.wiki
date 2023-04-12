@@ -1,0 +1,74 @@
+---
+Test
+---
+!*** Initialization and Login to Tempo
+
+!| script           |com.appiancorp.ps.automatedtest.fixture.TempoFixture|
+|set up login details                                                    |
+|login with username|testuser_01                                         |
+***!
+!*** Click on all the tabs
+
+!| script|
+!*** Initiate request
+#RP DETAILS
+!| script                                           |
+|populate field |RP Trade Name  |with|tradnametest  |
+|populate field |RP Legal Name  |with|legalnametest |
+|populate field |RP Type        |with|Retailer      |
+|populate field |RP Email       |with|rpmail@test   |
+|populate field |RP Phone Number|with|+91 9999999999|
+|click on button|NEXT           |                   |
+#Inspection details
+!| script                                                       |
+|populate field |Product Type       |with|Vaping Products       |
+|populate field |Product Regulations|with|TVPA-30.21, TVPA-30.22|
+|populate field |URL                |with|https://google.com    |
+|click on button|NEXT                                           |
+#Violation details
+!| script                                                                                                                |
+|click on grid  |[1]        |add row link                                                                                |
+|click on grid  |[1]        |add row link                                                                                |
+|populate       |FILE_UPLOAD|field |[1]|with|C:/Users/vijayarajanm/Documents/Poc_Flow Dig_Vijayarajan Muthurajan_2391.jpg|
+|populate grid  |[1]        |column|[2]|row |[1]                   |with                   |TVPA-30.21                   |
+|populate grid  |[1]        |column|[2]|row |[2]                   |with                   |TVPA-30.22                   |
+|populate grid  |[1]        |column|[3]|row |[1]                   |with                   |ok                           |
+|populate grid  |[1]        |column|[3]|row |[2]                   |with                   |ok                           |
+|populate grid  |[1]        |column|[4]|row |[1]                   |with                   |YES                          |
+|populate grid  |[1]        |column|[4]|row |[2]                   |with                   |NO                           |
+|click on button|NEXT                                                                                                    |
+#Inspection Review
+!| script                                     |
+|verify field   |Inspector Notes|is present   |
+|populate field |Inspector Notes|with value|ok|
+|click on button|Submit                       |
+|click on button|YES                          |
+|click on link  |Go to Project  Details       |
+
+***!
+!*** Log out 
+!| script|
+|logout  |
+***!
+
+!*** Initialization and Login to Tempo
+
+!| script                             |
+|set up login details                 |
+|login with username|testspecialist_01|
+***!
+
+!*** Specialist SENDBACK
+!| script                                                                |
+|click on menu  |My Task                                                 |
+|click on grid  |[1]                      |column|[1]    |row    |[1]    |
+|accept task                                                             |
+|populate field |Inspector Edits Required?|with  |YES                    |
+|populate field |Comments                 |with  |Inspector edit required|
+|click on button|SEND BACK                                               |
+|click on button|YES                                                     |
+
+!*** Log out and tear down
+!| script|
+|logout  |
+*****!

@@ -1,0 +1,14 @@
+!contents -R2 -g -p -f -h
+
+!| Scenario            |setup for test script for browser|browserType|locale|location|version|versionNum|url|appianUrl|
+|setup with browser    |@browserType                                                                                  |
+|set appian locale to  |@location                                                                                     |
+|set appian version to |@versionNum                                                                                   |
+|set appian url to     |@appianUrl                                                                                    |
+|set timeout seconds to|20                                                                                            |
+|set start datetime                                                                                                   |
+
+
+|scenario                         |setup for test script                                                                                      |
+|setup for test script for browser|${CHROME}|locale|${en_US}|version|${22.4}|url|${https://appiancoe.vuram.com/suite/sites/tobacco-and-vaping}|
+

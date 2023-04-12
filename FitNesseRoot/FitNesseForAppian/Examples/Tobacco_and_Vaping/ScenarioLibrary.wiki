@@ -1,0 +1,11 @@
+!contents -R2 -g -p -f -h
+
+!|scenario            |set up login details                                      |
+|setup with           |CHROME                      |browser                      |
+|set appian url to    |https://appiancoe.vuram.com/suite/sites/tobacco-and-vaping|
+|set appian version to|22.4                                                      |
+|set appian locale to |en_US                                                     |
+|login with username  |@username                                                 |
+
+
+

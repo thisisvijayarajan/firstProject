@@ -1,0 +1,75 @@
+!***> FitNesse Configurations
+
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {java -Dlog4j.configuration=file:///${automated.testing.home}/log4j.properties -cp %p %m}
+!path ${automated.testing.home}/**.jar
+*!
+
+
+!*** Initialization and Login to Tempo
+!*** Scenario - Setup using default values
+!| script           |com.appiancorp.ps.automatedtest.fixture.TempoFixture|
+|set up login details                                                    |
+|login with username|testuser_01                                         |
+***!
+!*** Click on all the tabs
+
+!*** Initiate request
+#RP DETAILS
+!| script                                                                                                                                                             |
+|Enter RP Details with RP Trade Name|tradnametest|with RP Legal Name|legalnametest|with RP Type|Retailer|with RP Email|rpmail@test|with RP Phone Number|+91 9999999999|
+|click on button |NEXT              |                                                                                                                                 |
+#Inspection details
+!| script                                                       |
+|populate field |Product Type       |with|Vaping Products       |
+|populate field |Product Regulations|with|TVPA-30.21, TVPA-30.22|
+|populate field |URL                |with|https://google.com    |
+|click on button|NEXT                                           |
+#Violation details
+!| script                                                                                                                |
+|click on grid  |[1]        |add row link                                                                                |
+|click on grid  |[1]        |add row link                                                                                |
+|populate       |FILE_UPLOAD|field |[1]|with|C:/Users/vijayarajanm/Documents/Poc_Flow Dig_Vijayarajan Muthurajan_2391.jpg|
+|populate grid  |[1]        |column|[2]|row |[1]                   |with                   |TVPA-30.21                   |
+|populate grid  |[1]        |column|[2]|row |[2]                   |with                   |TVPA-30.22                   |
+|populate grid  |[1]        |column|[3]|row |[1]                   |with                   |ok                           |
+|populate grid  |[1]        |column|[3]|row |[2]                   |with                   |ok                           |
+|populate grid  |[1]        |column|[4]|row |[1]                   |with                   |YES                          |
+|populate grid  |[1]        |column|[4]|row |[2]                   |with                   |NO                           |
+|click on button|NEXT                                                                                                    |
+#Inspection Review
+!| script                                     |
+|verify field   |Inspector Notes|is present   |
+|populate field |Inspector Notes|with value|ok|
+|click on button|Submit                       |
+|click on button|YES                          |
+|click on link  |Go to Project  Details       |
+
+***!
+!*** Log out 
+!| script|
+|logout  |
+***!
+
+!*** Initialization and Login to Tempo
+!| script                                                                        |
+|set appian url to    |https://appiancoe.vuram.com/suite/sites/tobacco-and-vaping|
+|set appian version to|22.4                                                      |
+|set appian locale to |en_US                                                     |
+|login with username  |testspecialist_01                                         |
+***!
+
+!*** Rejection by Specialist
+!| script                                   |
+|click on menu  |My Task                    |
+|click on grid  |[1]     |column|[1]|row|[1]|
+|accept task                                |
+|populate field |Comments|with  |REJECTION  |
+|click on button|REJECT[2]                  |
+|click on button|YES                        |
+
+!*** Log out and tear down
+!| script |
+|logout   |
+|tear down|
+*****!

@@ -1,0 +1,337 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20221219</FitNesseVersion>
+  <rootPath>FitNesseForAppian.Examples.Tobacco_and_Vaping</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>10</exceptions>
+    </counts>
+    <date>2023-04-11T11:20:40+05:30</date>
+    <runTimeInMillis>19</runTimeInMillis>
+    <content>&lt;br/&gt;!*** Initialization and Login to Tempo&lt;br/&gt;&lt;div class="collapsible"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Scenario - Setup using default values&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;script&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: script.&lt;/span&gt;&lt;/td&gt;
+		&lt;td colspan="7"&gt;com.appiancorp.ps.automatedtest.fixture.TempoFixture&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;scenario&lt;/td&gt;
+		&lt;td colspan="7"&gt;setup for test script&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;setup for test script for browser&lt;/td&gt;
+		&lt;td&gt;&lt;span class="meta"&gt;undefined variable: CHROME&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;locale&lt;/td&gt;
+		&lt;td&gt;&lt;span class="meta"&gt;undefined variable: en_US&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;version&lt;/td&gt;
+		&lt;td&gt;&lt;span class="meta"&gt;undefined variable: 22.4&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;url&lt;/td&gt;
+		&lt;td&gt;${https://appiancoe.vuram.com/suite/sites/tobacco-and-vaping}&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;login with username&lt;/td&gt;
+		&lt;td colspan="7"&gt;testuser_01&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+!*** Click on all the tabs&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;script&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: script.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;div class="collapsible"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Initiate request&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="4" class="error"&gt;script&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: script.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;populate field&lt;/td&gt;
+		&lt;td&gt;RP Trade Name&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td&gt;tradnametest&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;populate field&lt;/td&gt;
+		&lt;td&gt;RP Legal Name&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td&gt;legalnametest&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;populate field&lt;/td&gt;
+		&lt;td&gt;RP Type&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td&gt;Retailer&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;populate field&lt;/td&gt;
+		&lt;td&gt;RP Email&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td&gt;rpmail@test&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;populate field&lt;/td&gt;
+		&lt;td&gt;RP Phone Number&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td&gt;+91 9999999999&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;click on button&lt;/td&gt;
+		&lt;td&gt;NEXT&lt;/td&gt;
+		&lt;td colspan="2"&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="4" class="error"&gt;script&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: script.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;populate field&lt;/td&gt;
+		&lt;td&gt;Product Type&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td&gt;Vaping Products&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;populate field&lt;/td&gt;
+		&lt;td&gt;Product Regulations&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td&gt;TVPA-30.21, TVPA-30.22&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;populate field&lt;/td&gt;
+		&lt;td&gt;URL&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td&gt;https://google.com&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;click on button&lt;/td&gt;
+		&lt;td colspan="3"&gt;NEXT&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="8" class="error"&gt;script&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: script.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;click on grid&lt;/td&gt;
+		&lt;td&gt;[1]&lt;/td&gt;
+		&lt;td colspan="6"&gt;add row link&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;click on grid&lt;/td&gt;
+		&lt;td&gt;[1]&lt;/td&gt;
+		&lt;td colspan="6"&gt;add row link&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;populate&lt;/td&gt;
+		&lt;td&gt;FILE_UPLOAD&lt;/td&gt;
+		&lt;td&gt;field&lt;/td&gt;
+		&lt;td&gt;[1]&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td colspan="3"&gt;C:/Users/vijayarajanm/Documents/Poc_Flow Dig_Vijayarajan Muthurajan_2391.jpg&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;populate grid&lt;/td&gt;
+		&lt;td&gt;[1]&lt;/td&gt;
+		&lt;td&gt;column&lt;/td&gt;
+		&lt;td&gt;[2]&lt;/td&gt;
+		&lt;td&gt;row&lt;/td&gt;
+		&lt;td&gt;[1]&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td&gt;TVPA-30.21&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;populate grid&lt;/td&gt;
+		&lt;td&gt;[1]&lt;/td&gt;
+		&lt;td&gt;column&lt;/td&gt;
+		&lt;td&gt;[2]&lt;/td&gt;
+		&lt;td&gt;row&lt;/td&gt;
+		&lt;td&gt;[2]&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td&gt;TVPA-30.22&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;populate grid&lt;/td&gt;
+		&lt;td&gt;[1]&lt;/td&gt;
+		&lt;td&gt;column&lt;/td&gt;
+		&lt;td&gt;[3]&lt;/td&gt;
+		&lt;td&gt;row&lt;/td&gt;
+		&lt;td&gt;[1]&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td&gt;ok&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;populate grid&lt;/td&gt;
+		&lt;td&gt;[1]&lt;/td&gt;
+		&lt;td&gt;column&lt;/td&gt;
+		&lt;td&gt;[3]&lt;/td&gt;
+		&lt;td&gt;row&lt;/td&gt;
+		&lt;td&gt;[2]&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td&gt;ok&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;populate grid&lt;/td&gt;
+		&lt;td&gt;[1]&lt;/td&gt;
+		&lt;td&gt;column&lt;/td&gt;
+		&lt;td&gt;[4]&lt;/td&gt;
+		&lt;td&gt;row&lt;/td&gt;
+		&lt;td&gt;[1]&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td&gt;YES&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;populate grid&lt;/td&gt;
+		&lt;td&gt;[1]&lt;/td&gt;
+		&lt;td&gt;column&lt;/td&gt;
+		&lt;td&gt;[4]&lt;/td&gt;
+		&lt;td&gt;row&lt;/td&gt;
+		&lt;td&gt;[2]&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td&gt;NO&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;click on button&lt;/td&gt;
+		&lt;td colspan="7"&gt;NEXT&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="4" class="error"&gt;script&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: script.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;verify field&lt;/td&gt;
+		&lt;td&gt;Inspector Notes&lt;/td&gt;
+		&lt;td colspan="2"&gt;is present&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;populate field&lt;/td&gt;
+		&lt;td&gt;Inspector Notes&lt;/td&gt;
+		&lt;td&gt;with value&lt;/td&gt;
+		&lt;td&gt;ok&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;click on button&lt;/td&gt;
+		&lt;td colspan="3"&gt;Submit&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;click on button&lt;/td&gt;
+		&lt;td colspan="3"&gt;YES&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;click on link&lt;/td&gt;
+		&lt;td colspan="3"&gt;Go to Project  Details&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="collapsible"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Log out &lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;script&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: script.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;logout&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;div class="collapsible"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Initialization and Login to Tempo&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2" class="error"&gt;script&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: script.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;set appian url to&lt;/td&gt;
+		&lt;td&gt;https://appiancoe.vuram.com/suite/sites/tobacco-and-vaping&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;set appian version to&lt;/td&gt;
+		&lt;td&gt;22.4&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;set appian locale to&lt;/td&gt;
+		&lt;td&gt;en_US&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;login with username&lt;/td&gt;
+		&lt;td&gt;testspecialist_01&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;!*** Rejection by Specialist&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="6" class="error"&gt;script&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: script.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;click on menu&lt;/td&gt;
+		&lt;td colspan="5"&gt;My Task&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;click on grid&lt;/td&gt;
+		&lt;td&gt;[1]&lt;/td&gt;
+		&lt;td&gt;column&lt;/td&gt;
+		&lt;td&gt;[1]&lt;/td&gt;
+		&lt;td&gt;row&lt;/td&gt;
+		&lt;td&gt;[1]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td colspan="6"&gt;accept task&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;populate field&lt;/td&gt;
+		&lt;td&gt;Comments&lt;/td&gt;
+		&lt;td&gt;with&lt;/td&gt;
+		&lt;td colspan="3"&gt;REJECTION&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;click on button&lt;/td&gt;
+		&lt;td colspan="5"&gt;REJECT[2]&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;click on button&lt;/td&gt;
+		&lt;td colspan="5"&gt;YES&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;div class="collapsible"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Log out and tear down&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td class="error"&gt;script&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: script.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;logout&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;tear down&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <relativePageName>Tobacco_and_Vaping</relativePageName>
+  </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>java -cp C:\FitNesse\lib\fitnesse-20221219-standalone.jar fit.FitServer VURAM-2023-0035 52200 3863</command>
+    <exitCode>10</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>932</totalRunTimeInMillis>
+</testResults>
+
