@@ -64,7 +64,7 @@ Test
 |click on grid  |[1]                      |column|[1]    |row    |[1]    |
 |accept task                                                             |
 |populate field |Inspector Edits Required?|with  |YES                    |
-|populate field |Comments                 |with  |Inspector edit required|
+|populate field |Comments                 |with  |Mandatory Inspector edit required|
 |click on button|SEND BACK                                               |
 |click on button|YES                                                     |
 
